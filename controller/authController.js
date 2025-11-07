@@ -11,7 +11,7 @@ const registration = (req, res) => {
   });
   User.save();
 
-  res.status(201).send("registration succfull");
+  res.status(201).send("Registration Successful");
 };
 
 module.exports = { registration };
