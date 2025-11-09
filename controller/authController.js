@@ -3,6 +3,9 @@ const userSchema = require("../models/userSchema");
 const registration = (req, res) => {
   const { fullName, email, password, avatar } = req.body;
 
+  if (!fullName) return res.status(400).send("Name Is Requird!");
+  
+
   const User = new userSchema({
     fullName,
     email,
