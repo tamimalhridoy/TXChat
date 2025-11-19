@@ -8,5 +8,3 @@ const emailValidator = (mail) => {
   console.log(s2, regex.test(s2));
   console.log(s3, regex.test(s3));
 };
-
-er
