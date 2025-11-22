@@ -17,6 +17,7 @@ const registration = async (req, res) => {
     email,
     password,
     avatar,
+    otp: "1234",
   });
   User.save();
 
