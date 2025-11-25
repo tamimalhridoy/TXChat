@@ -17,7 +17,7 @@ const registration = async (req, res) => {
     email,
     password,
     avatar,
-    otp: "1234",
+    otp: "null",
   });
   User.save();
 
@@ -34,6 +34,7 @@ const login = async (req, res) => {
   const existingUser = await userSchema.findOne({ email });
 
   const passwordcheck = await existingUser.isPasswordValid(password);
+  if (!passwordcheck) return res.status(400).send("wrong password");
 
   res.status(200).send("login seccfull");
 };
